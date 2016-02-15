@@ -1,0 +1,432 @@
+@import bourbon
+@import vars.sass
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//custom styles here
+// magnific popup
+// styles for dialog window
+
+div[id^="popup_"]
+	background: white
+	padding: 20px 30px
+	text-align: left
+	max-width: 600px
+	margin: 40px auto
+	position: relative
+
+
+.my-mfp-zoom-in
+	.zoom-anim-dialog
+		opacity: 0
+		transition: all 0.2s ease-in-out
+		transform: scale(0.8)
+	&.mfp-ready .zoom-anim-dialog
+		opacity: 1
+		transform: scale(1)
+	&.mfp-removing .zoom-anim-dialog
+		transform: scale(0.8)
+		opacity: 0
+	&.mfp-bg
+		opacity: 0
+		transition: opacity 0.3s ease-out
+	&.mfp-ready.mfp-bg
+		opacity: 0.8
+	&.mfp-removing.mfp-bg
+		opacity: 0
+
+.my-mfp-slide-bottom
+	.zoom-anim-dialog
+		opacity: 0
+		transition: all 0.2s ease-out
+		transform: translatey(-20px) perspective(600px) rotatex(10deg)
+	&.mfp-ready .zoom-anim-dialog
+		opacity: 1
+		transform: translatey(0) perspective(600px) rotatex(0)
+	&.mfp-removing .zoom-anim-dialog
+		opacity: 0
+		transform: translatey(-10px) perspective(600px) rotatex(10deg)
+	&.mfp-bg
+		opacity: 0
+		transition: opacity 0.3s ease-out
+	&.mfp-ready.mfp-bg
+		opacity: 0.8
+	&.mfp-removing.mfp-bg
+		opacity: 0
+
+
+// ##############################
+// s_video
+.s_video
+	background: url(/img/bg-section-copper_min.jpg) no-repeat center $dc
+	background-size: cover
+	border-bottom: solid 2px $dc
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 3px
+		right: 3px
+		bottom: 3px
+		left: 25px
+		border-image: url(/img/border-image-rivets_min.png) 15 round round
+		border-width: 15px
+	.mu_container
+		position: relative
+	h2
+		// color: #fff
+		// text-shadow: 0 0 2px $dc
+	color: #fff
+	text-shadow: 0 0 8px $oc
+	.cog1
+		animation: mu_rotate 60s infinite linear
+		bottom: 0
+		height: auto
+		margin-bottom: 0
+		margin-right: 0
+		position: absolute
+		right: 22px
+		width: 100px
+		z-index: 1
+
+	.cog2
+		animation: mu_rotate_reverse 30s infinite linear
+		bottom: 0
+		height: auto
+		margin-bottom: -75px
+		margin-right: 0
+		position: absolute
+		right: 32px
+		width: 150px
+		z-index: 2
+	.table
+		margin-left: auto
+		margin-right: auto
+		.td
+			height: 315px
+	.wrap_copper
+		padding: 20px
+		position: relative
+		background: url(/img/bg-youtube_wrap_min.jpg) $copper1
+		background-size: cover
+		border-radius: 10px
+		border-top: solid 1px #bbb
+		+bsh
+		max-width: 400px
+		margin: 15px
+		&::before
+			content: ''
+			position: absolute
+			top: 3px
+			left: 3px
+			bottom: 3px
+			right: 3px
+			border-image: url(/img/border-image-rivets_min.png) 15 round round
+			border-width: 15px
+		.wrap_paper
+			background: url(/img/28p8cnbig.jpg) #e8d19f
+			background-size: cover
+			padding: 0 10px
+			border-top: solid 1px $dc
+			border-bottom: solid 1px #bbb
+			border-left: solid 1px $copper1
+			border-right: solid 1px $copper1
+			border-radius: 10px
+
+.bg_s_video
+	+br10
+	background: url(/img/vintage-burst_min.jpg) no-repeat center #6E3508
+	background-size: cover
+	border-bottom: solid 1px #bbb
+	border-left: solid 1px $copper1
+	border-right: solid 1px $copper1
+	border-top: solid 1px	$dc
+	bottom: 22px
+	left: 43px
+	position: absolute
+	right: 22px
+	top: 22px
+
+.youtube-wrap
+	padding: 20px
+	max-width: 600px
+	border-top: solid 1px #bbb
+	background: url(/img/bg-youtube_wrap_min.jpg) center $copper1
+	background-size: cover
+	+br10
+	position: relative
+	margin: 15px auto
+	z-index: 0
+	+bsh
+	&::after
+		content: ''
+		position: absolute
+		top: 3px
+		left: 3px
+		bottom: 3px
+		right: 3px
+		border-image: url(/img/border-image-rivets_min.png) 15 round round
+		border-width: 15px
+		z-index: -1
+	iframe
+		border-bottom: solid 1px #bbb
+		border-top: solid 1px $dc
+		border-left: solid 1px $copper1
+		border-right: solid 1px $copper1
+		width: 100%
+		height: 300px
+
+
+
+// ##############################
+// s_advantages
+.s_advantages
+	background: url(/img/bg-section-copper_min.jpg) no-repeat center $dc
+	background-size: cover
+	border-bottom: solid 2px $dc
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 3px
+		right: 3px
+		bottom: 3px
+		left: 25px
+		border-image: url(/img/border-image-rivets_min.png) 15 round round
+		border-width: 15px
+	h3
+		margin-top: 20px
+		margin-bottom: 10px
+	.mu_container
+		position: relative
+	.cog1
+		animation: mu_rotate 60s infinite linear
+		top: 0
+		height: auto
+		margin-top: 0
+		margin-right: 0
+		position: absolute
+		right: 22px
+		width: 100px
+		z-index: 1
+	.cog2
+		animation: mu_rotate_reverse 60s infinite linear
+		bottom: 0
+		height: auto
+		margin-bottom: 0
+		margin-left: 0
+		position: absolute
+		left: 22px
+		width: 100px
+		z-index: 1
+	.cog3
+		animation: mu_rotate 30s infinite linear
+		bottom: 0
+		height: auto
+		margin-bottom: -75px
+		margin-left: 0
+		position: absolute
+		left: 32px
+		width: 150px
+		z-index: 2
+
+.bg_s_advantages
+	+br10
+	background: url(/img/maxresdefault.jpg) no-repeat center #E7C883
+	background-size: cover
+	border-bottom: solid 1px #bbb
+	border-left: solid 1px $copper1
+	border-right: solid 1px $copper1
+	border-top: solid 1px	$dc
+	bottom: 22px
+	left: 43px
+	position: absolute
+	right: 22px
+	top: 22px
+
+.advantage_wrap
+	max-width: 450px
+	margin: 20px	auto
+	background: url(/img/bg-youtube_wrap_min.jpg) center $copper1
+	+br10
+	background-size: cover
+	position: relative
+	padding: 30px
+	+bsh
+	border-top: solid 1px #bbb
+	&::before
+		content: ''
+		position: absolute
+		top: 3px
+		right: 3px
+		bottom: 3px
+		left: 3px
+		border-image: url(/img/border-image-rivets_min.png) 15 round round
+		border-width: 15px
+	> *:not([class*="bg_advantage"])
+		position: relative
+
+.bg_advantage
+	+br10
+	background: url(/img/28p8cnbig.jpg) no-repeat center #e8d19f
+	background-size: cover
+	border-bottom: solid 1px #bbb
+	border-left: solid 1px $copper1
+	border-right: solid 1px $copper1
+	border-top: solid 1px	$dc
+	bottom: 22px
+	left: 22px
+	position: absolute
+	right: 22px
+	top: 22px
+
+
+// ##############################
+// s_prices
+.s_prices
+	background: url(/img/bg-section-copper_min.jpg) no-repeat center $dc
+	background-size: cover
+	border-bottom: solid 2px $dc
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 3px
+		right: 3px
+		bottom: 3px
+		left: 25px
+		border-image: url(/img/border-image-rivets_min.png) 15 round round
+		border-width: 15px
+	.row
+		margin-top: 40px
+	li
+		margin-bottom: 5px
+		&:hover, &:focus
+		a
+			border-bottom: solid 2px #fff
+			display: block
+			text-decoration: none
+			&:hover, &:focus
+				border-bottom: solid 2px $dc
+				color: inherit
+	.button
+		margin-bottom: 80px
+	.mu_container
+		position: relative
+	.cog1
+		animation: mu_rotate_reverse 60s infinite linear
+		top: 0
+		height: auto
+		margin-top: 0
+		margin-left: 23px
+		position: absolute
+		left: 0
+		width: 100px
+		z-index: 1
+
+
+.bg_s_prices
+	+br10
+	// background: url(/img/minimalistic_colorful_atari_19_2560x1440_wallpaperhi.com.jpg) no-repeat center #E7C883
+	background: url(/img/maxresdefault2.jpg) no-repeat center bottom #E7C883
+	background-size: cover
+	border-bottom: solid 1px #bbb
+	border-left: solid 1px $copper1
+	border-right: solid 1px $copper1
+	border-top: solid 1px	$dc
+	bottom: 22px
+	left: 43px
+	position: absolute
+	right: 22px
+	top: 22px
+.check_wrap
+	padding: 10px
+	background-color: #fff
+	width: 280px
+	margin-left: auto
+	margin-right: auto
+	text-shadow: none
+	// box-shadow: 0 0 50px #000
+	+bsh
+	.check
+		padding: 10px
+		border-left: solid 3px $dc
+		border-right: solid 3px $dc
+		border-top: dashed 3px $dc
+		border-bottom: dashed 3px $dc
+		h3
+			position: relative
+			&:after
+				content: ''
+				display: block
+				width: 100%
+				position: absolute
+				bottom: -15px
+				left: 0
+				border-bottom: dashed 3px $dc
+
+		a
+			color: $dc
+		span
+			float: right
+
+.d_price
+	position: relative
+	font-size: em(20)
+	margin-top: 15px
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		position: absolute
+		top: -5px
+		left: 0
+		border-top: dashed 3px $dc
+
+
+
+// ##############################
+// animations
+@keyframes mu_rotate
+		  0%
+		    transform: rotate(0deg)
+		  100%
+		    transform: rotate(359deg)
+
+@keyframes mu_rotate_reverse
+		  0%
+		    transform: rotate(0deg)
+		  100%
+		    transform: rotate(-359deg)
+
+
+//always end
+@import media
+
+//load libs sass
+@import app/libs/animate/animate.sass
+@import app/libs/font-awesome-4.5.0/font-awesome.sass
+@import app/libs/magnific-popup/magnific-popup.sass
+@import app/libs/blackmaster/blackmaster.sass
+@import app/libs/robotobold/robotobold.sass

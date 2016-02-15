@@ -1,0 +1,521 @@
+@import bourbon
+@import vars.sass
+
+
+// ##############################
+// sass reset
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	border: 0
+	font-size: 100%
+	font: inherit
+	margin: 0
+	padding: 0
+	vertical-align: baseline
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+body
+	line-height: 1
+ol, ul
+	list-style: none
+blockquote, q
+	quotes: none
+blockquote
+	&:before, &:after
+		content: ""
+		content: none
+q
+	&:before, &:after
+		content: ""
+		content: none
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+
+
+// ##############################
+// подсвечиваем теги без необходимых атрибутов
+img:not([alt]), label:not([for]), input[type=submit]:not([value])
+	outline: 2px solid red
+
+
+
+// ##############################
+// light blocks
+.light
+	color: $dc
+	a, &:focus
+		color: $dc
+		&:hover, &:active
+			color: $dcah
+	.main_mnu
+		a
+			&::after
+				background-color: $dcah
+
+
+
+// ##############################
+// dark blocks
+.dark
+	color: $lc
+	a, &:focus
+		color: $lc
+		&:hover, &:active
+			color: $lcah
+	.main_mnu
+		a
+			&::after
+				background-color: $lcah
+
+
+
+// ##############################
+// external links
+a[href^="http://"]:not(.not_out_link),
+a[href^="https://"]:not(.not_out_link)
+	&::after
+		content: "\f08e"
+		font-family: fontawesome
+		margin: 0 em(5)
+
+
+
+// ##############################
+// select
+::selection
+	color: #fff
+	background-color: $dca
+	text-shadow: none
+
+
+
+// ##############################
+// mobile-menu
+.toggle_mnu
+	// border: 1px solid $dc
+	float: right
+	background-color: rgba(255, 255, 255, .9)
+	border-radius: 2px
+	display: block
+	height: 40px
+	margin-left: 10px
+	padding: 10px 6px 0 6px
+	width: 40px
+	position: fixed
+	top: 20px
+	right: 20px
+	z-index: 10
+	span:after, span:before
+		content: ""
+		left: 0
+		position: absolute
+		top: 9px
+		transition: all 0.3s
+	span:after
+		top: 18px
+	span
+		display: block
+		position: relative
+	span, span:after, span:before
+		backface-visibility: hidden
+		border-radius: 2px
+		height: 2px
+		width: 100%
+		background-color: $dc
+	&.on span:before
+		transform: rotate(45deg) translate(-1px, 0px)
+	&.on span:after
+		transform: rotate(-45deg) translate(6px, -7px)
+	&.on span
+		background-color: transparent
+
+
+
+// ##############################
+// common
+html
+	height: 100%
+body
+	background-color: $dc
+	font-family: "robotoregular", sans-serif
+	font-size: 19px
+	height: 100%
+	line-height: 1.6
+	margin-left: 180px
+	min-width: 320px
+	// overflow-x: hidden
+	position: relative
+.pjax_container
+	height: 100%
+section
+	padding-top: 50px
+	padding-bottom: 80px
+	h1, h2, h3, h4, h5, h6
+		margin-bottom: 40px
+		text-align: center
+.mu_container
+	padding: 20px 20px 20px 50px
+.hidden
+	display: none
+h1, h2, h3, h4, h5, h6
+	font-family: steamy
+h1
+	font-size: em(29)
+	line-height: em(15)
+	margin-bottom: 20px
+	text-align: center
+h2
+	font-size: em(55)
+	line-height: em(15)
+h3
+	font-size: em(28)
+	line-height: em(15)
+	// font-family: roboto
+a
+	text-decoration: underline
+p
+	hyphens: auto
+	line-height: em(27)
+	margin: 10px auto
+	text-align: justify
+	word-spacing: 6px
+.p_wrap
+	margin-left: auto
+	margin-right: auto
+	max-width: 80%
+	min-width: 300px
+.table
+	display: table
+	.tr
+		display: table-row
+		.td
+			display: table-cell
+			vertical-align: middle
+.btn_wrap_souvenirs
+	border-width: 15px 0
+	margin-bottom: 5px
+	margin-top: 5px
+	padding: 10px 0
+.btn_wrap_ul
+	border-width: 15px 0 0 0
+	padding-top: 5px
+a.btn, a.btn_min, a.btn_li
+	+bsh
+	background: url(/img/bg_copper_min.jpg) no-repeat center $copper1
+	background-size: auto 50px
+	border-bottom: solid 1px $dc
+	border-top: solid 1px #bbb
+	display: inline-block
+	font-family: "robotobold"
+	font-size: 20px
+	text-decoration: none
+	text-shadow: 0 0 1px #aaa
+	transition-duration: 0.2s
+	transition-property: box-shadow, text-shadow, color
+	transition-timing-function: cubic-bezier(.68,.01,.51,2.0)
+	&:hover
+		box-shadow: 0 0 3px 3px $lca
+		text-shadow: 0 0 1px #000
+	&:active
+		border-bottom: solid 1px #bbb
+		border-top: solid 1px $dc
+		box-shadow: inset 0 3px 3px #111
+		text-shadow: 0 0 1px #000
+a.btn
+	border-radius: 50px
+	max-width: 200px
+	min-width: 150px
+	padding: 6px
+a.btn_min
+	+br5
+	height: 40px
+	margin-bottom: 2px
+	margin-left: 5px
+	margin-right: 5px
+	padding: 4px
+	width: 40px
+	i.fa
+		font-size: 26px
+a.btn_li
+	// height: 40px
+	+br5
+	margin-bottom: 3px
+	margin-top: 3px
+	padding: 2px 8px
+	text-align: left
+	width: 140px
+	i.fa
+		margin-right: 6px
+.dbi
+	border-image: url(/img/border-image-rivets_min.png) 15 round round
+	// border-width: 15px
+.old_text
+	color: $oc
+	text-shadow: 0px 0px 8px #807874
+.big_first_latter
+	&:first-letter
+		float: left
+		font-size: 70px
+		line-height: 62px
+		font-family: "steamy"
+		margin-right: 5px
+
+
+
+// ##############################
+// mnu_left
+.mnu_left
+	background: url(/img/bg-copper_min.jpg) no-repeat center $copper1
+	background-size: cover
+	border-bottom-right-radius: 10px
+	border-right: solid 1px $copper1
+	border-top-right-radius: 10px
+	box-shadow: /* inset */ 3px 3px 5px 0px #111
+	height: 100%
+	left: 0
+	min-height: 600px
+	overflow: auto
+	position: fixed
+	top: 0
+	width: 200px
+	z-index: 10
+	&::before
+		border-image: url(/img/border-image-rivets_min.png) 15/15px round round
+		bottom: 2px
+		content: ''
+		left: 2px
+		position: absolute
+		right: 2px
+		top: 2px
+	.mu_container
+		height: 100%
+		padding: 20px
+		position: relative
+		text-align: center
+
+	.phone
+		display: block
+		font-size: em(16)
+		margin: 10px auto 0 auto
+		text-decoration: none
+		&:hover
+			color: inherit
+		i
+			margin-right: 8px
+	.footer
+		bottom: 20px
+		display: block
+		left: 0
+		position: absolute
+		right: 0
+		text-align: center
+		span
+			font-size: 12px
+			a
+				text-decoration: none
+		.social_links
+			text-align: center
+a.logo
+	+bsh
+	background: url(/img/28p8cn_min.jpg) no-repeat #eddfb8
+	background-size: cover
+	border-radius: 4px
+	display: block
+	padding: 5px
+	position: relative
+	text-align: center
+	text-decoration: none
+	.bm-logo
+		font-size: em(68)
+	&:hover, &:focus
+		// transform: rotate(5deg)
+		color: inherit
+		text-decoration: none
+	&::before
+		// height: 100%
+		// width: 100%
+		border-image: url(/img/border-image-bolt4_min.png) 15 round round
+		border-width: 15px
+		bottom: 3px
+		content: ''
+		left: 3px
+		position: absolute
+		right: 3px
+		top: 3px
+.logo_name
+	font-family: steamy
+	font-size: 20px
+	line-height: 26px
+.logo_desc
+	font-size: 18px
+
+
+
+// ##############################
+// hidden_mnu
+.hidden_mnu
+	background: url(/img/bg-copper_min.jpg) center $dc
+	border-width: 15px
+	box-shadow: 0 0 2px #111
+	display: none
+	font-size: em(20)
+	left: 20px
+	padding-bottom: 10px
+	padding-top: 10px
+	position: fixed
+	text-align: center
+	top: 0
+	z-index: 11
+	li
+		a
+			display: block
+			padding: 5px
+			text-align: left
+			text-decoration: none
+			&:hover, &:active
+				background-color: $dca
+				color: $dc
+			i
+				margin-right: 8px
+
+
+
+// ##############################
+// top_line
+.top_line
+	background: url(/img/bg-copper_min.jpg) no-repeat center $dc
+	background-size: cover
+	border-width: 0 0 15px 0
+	text-align: center
+	.mu_container
+		padding: 10px
+		margin: 0
+	.td
+		height: 56px
+	a.logo
+		display: inline-block
+		margin: 0
+		img
+			width: 50px
+			height: 50px
+			display: inline-block
+	.table
+		width: 100%
+		.td + .td
+			padding-left: 10px
+	.phone
+		font-size: em(18)
+		text-decoration: none
+		&:hover
+			color: inherit
+		i
+			margin-right: 8px
+
+
+
+// ##############################
+// header
+.big-background_wrap
+	background: url(/img/bg-section-copper_min.jpg) $copper1
+	border-bottom: solid 2px $dc
+	height: 100%
+	padding: 22px 22px 22px 43px
+	position: relative
+	&::before
+		border-image: url(/img/border-image-rivets_min.png) 15 round round
+		border-width: 15px
+		bottom: 3px
+		content: ''
+		left: 25px
+		position: absolute
+		right: 3px
+		top: 3px
+.big_background
+	+br10
+	background-color: $dc
+	background-image: url(/img/bg.jpg)
+	background-position: center 80%
+	background-size: cover
+	border-bottom: solid 1px #bbb
+	border-left: solid 1px $copper1
+	border-right: solid 1px $copper1
+	border-top: solid 1px	$dc
+	margin: 0
+	min-height: 100%
+	overflow: hidden
+	padding: 0
+	position: relative
+	z-index: 0
+.header_content
+	margin-top: 10%
+	margin-left: 10%
+	max-width: 400px
+	text-shadow: 0 0 10px #000
+
+
+
+
+// ################
+// youtube-video-bg
+.mbytp_wrapper
+	// border-radius: 10px
+
+.mbytp_wrapper::before
+	content: ""
+	position: absolute
+	display: block
+	height: 100%
+	width: 100%
+	background-color: rgba(0, 0, 0, 0.4)
+	z-index: 1
+.big-background_default_image
+	backface-visibility:hidden
+	// background-image: url(img/bg.jpg)
+	background-position: center 80%
+	background-size: cover
+
+
+
+// ##############################
+// ##############################
+// souvenirs
+.s_souvenirs
+	background: url(/img/bg-section-copper_min.jpg) repeat-y top center $dc
+	background-size: 100%
+	min-height: 100%
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		top: 3px
+		right: 3px
+		bottom: 3px
+		left: 25px
+		border-image: url(/img/border-image-rivets_min.png) 15 round round
+		border-width: 15px
+	
+
+.bg_s_souvenirs
+	+br10
+	background: url(http://www.emoticonswallpapers.com/background/thumb/dark/dark-pattern-136.jpg) center top $dc
+	// background-size: 100%
+	border-bottom: solid 1px #bbb
+	border-left: solid 1px $copper1
+	border-right: solid 1px $copper1
+	border-top: solid 1px	$dc
+	bottom: 22px
+	left: 43px
+	position: absolute
+	right: 22px
+	top: 22px
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $oc
+		opacity: .7
+		+br10
