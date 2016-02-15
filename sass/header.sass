@@ -155,7 +155,7 @@ section
 		margin-bottom: 40px
 		text-align: center
 .mu_container
-	padding: 20px 20px 20px 50px
+	padding: 30px 30px 30px 50px
 .hidden
 	display: none
 h1, h2, h3, h4, h5, h6
@@ -355,62 +355,55 @@ a.logo
 // ##############################
 // hidden_mnu
 .hidden_mnu
-	background: url(/img/bg-copper_min.jpg) center $dc
-	border-width: 15px
-	box-shadow: 0 0 2px #111
+	// box-shadow: 0 0 2px #111
+	// font-size: em(20)
+	// padding-bottom: 10px
+	// padding-top: 10px
+	background: $dc
+	border: solid 1px #fff
 	display: none
-	font-size: em(20)
-	left: 20px
-	padding-bottom: 10px
-	padding-top: 10px
+	left: 30px
 	position: fixed
 	text-align: center
 	top: 0
 	z-index: 11
-	li
-		a
-			display: block
-			padding: 5px
-			text-align: left
-			text-decoration: none
-			&:hover, &:active
-				background-color: $dca
-				color: $dc
-			i
-				margin-right: 8px
+	.mu_container
+		padding: 20px
+	.btn_li
+		margin-bottom: 10px
 
 
 
 // ##############################
 // top_line
 .top_line
-	background: url(/img/bg-copper_min.jpg) no-repeat center $dc
-	background-size: cover
-	border-width: 0 0 15px 0
-	text-align: center
-	.mu_container
-		padding: 10px
-		margin: 0
-	.td
-		height: 56px
-	a.logo
-		display: inline-block
-		margin: 0
-		img
-			width: 50px
-			height: 50px
-			display: inline-block
-	.table
-		width: 100%
-		.td + .td
-			padding-left: 10px
-	.phone
-		font-size: em(18)
-		text-decoration: none
-		&:hover
-			color: inherit
-		i
-			margin-right: 8px
+	// background: url(/img/bg-copper_min.jpg) no-repeat center $dc
+	// background-size: cover
+	// border-width: 0 0 15px 0
+	// text-align: center
+	// .mu_container
+	// 	padding: 10px
+	// 	margin: 0
+	// .td
+	// 	height: 56px
+	// a.logo
+	// 	display: inline-block
+	// 	margin: 0
+	// 	img
+	// 		width: 50px
+	// 		height: 50px
+	// 		display: inline-block
+	// .table
+	// 	width: 100%
+	// 	.td + .td
+	// 		padding-left: 10px
+	// .phone
+	// 	font-size: em(18)
+	// 	text-decoration: none
+	// 	&:hover
+	// 		color: inherit
+	// 	i
+	// 		margin-right: 8px
 
 
 
@@ -466,9 +459,18 @@ a.logo
 
 .big-background_default_image
 	backface-visibility:hidden
-	background-image: url(img/bg.jpg)
-	background-position: center 80%
+	+br10
+	background: url(/img/bg.jpg) no-repeat center $dc
 	background-size: cover
+	border-bottom: solid 1px #bbb
+	border-left: solid 1px $copper1
+	border-right: solid 1px $copper1
+	border-top: solid 1px	$dc
+	bottom: 22px
+	left: 43px
+	position: absolute
+	right: 22px
+	top: 22px
 
 
 
