@@ -349,9 +349,8 @@ div[id^="popup_"]
 
 .bg_s_prices
 	+br10
-	// background: url(/img/minimalistic_colorful_atari_19_2560x1440_wallpaperhi.com.jpg) no-repeat center #E7C883
-	background: url(/img/maxresdefault2.jpg) no-repeat center bottom #E7C883
-	background-size: cover
+	background: url(http://www.emoticonswallpapers.com/background/thumb/dark/dark-pattern-136.jpg) center top $dc
+	// background-size: 100%
 	border-bottom: solid 1px #bbb
 	border-left: solid 1px $copper1
 	border-right: solid 1px $copper1
@@ -361,6 +360,16 @@ div[id^="popup_"]
 	position: absolute
 	right: 22px
 	top: 22px
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $oc
+		opacity: .7
+		+br10
 .check_wrap
 	padding: 10px
 	background-color: #fff
