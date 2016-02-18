@@ -31,31 +31,8 @@ $(function() {
 	// Magnific popup zoom gallery
 	$(document).ready(function(){$(".zoom-gallery").magnificPopup({delegate:"a",type:"image",closeOnContentClick:!1,closeBtnInside:!1,mainClass:"mfp-with-zoom mfp-img-mobile",image:{verticalFit:!0,titleSrc:function(a){return a.el.attr("title")+' &middot; <a class="image-source-link" href="'+a.el.attr("data-source")+'" target="_blank">image source</a>'}},gallery:{enabled:!0},zoom:{enabled:!0,duration:300,opener:function(a){return a.find("img")}}})});
 
-	var $container = $(".masonry-container");
-		$container.imagesLoaded(function () {
-			$container.masonry({
-				columnWidth: ".item",
-			itemSelector: ".item"
-		});
-	});
 
 	// pjax
-	$(document).pjax('a.logo, .mnu_left a', '.pjax_container', {fragment: '.pjax_container'});
-	$('.pjax_container').on('pjax:success', function() {
-		$.pjax({
-			url:window.location.href,
-			container: '.box-mnu',
-			fragment: '.box-mnu'
-			// fragment: '.player'
-		});
-
-		// Magnific popup zoom gallery
-		$(document).ready(function(){$(".zoom-gallery").magnificPopup({delegate:"a",type:"image",closeOnContentClick:!1,closeBtnInside:!1,mainClass:"mfp-with-zoom mfp-img-mobile",image:{verticalFit:!0,titleSrc:function(e){return e.el.attr("title")+' &middot; <a class="image-source-link" href="'+e.el.attr("data-source")+'" target="_blank">image source</a>'}},gallery:{enabled:!0},zoom:{enabled:!0,duration:300,opener:function(e){return e.find("img")}}})});
-
-		// Magnific popup
-		$(".popup-with-zoom-anim").magnificPopup({type:"inline",fixedContentPos:!1,fixedBgPos:!0,overflowY:"auto",closeBtnInside:!0,preloader:!1,midClick:!0,removalDelay:300,mainClass:"my-mfp-zoom-in"});
-
-		console.log("Hello World");
-	});
+	$(document).pjax("a.logo, .mnu_left a",".pjax_container",{fragment:".pjax_container"}),$(".pjax_container").on("pjax:success",function(){$.pjax({url:window.location.href,container:".box-mnu",fragment:".box-mnu"}),$(document).ready(function(){$(".zoom-gallery").magnificPopup({delegate:"a",type:"image",closeOnContentClick:!1,closeBtnInside:!1,mainClass:"mfp-with-zoom mfp-img-mobile",image:{verticalFit:!0,titleSrc:function(a){return a.el.attr("title")+' &middot; <a class="image-source-link" href="'+a.el.attr("data-source")+'" target="_blank">image source</a>'}},gallery:{enabled:!0},zoom:{enabled:!0,duration:300,opener:function(a){return a.find("img")}}})}),$(".popup-with-zoom-anim").magnificPopup({type:"inline",fixedContentPos:!1,fixedBgPos:!0,overflowY:"auto",closeBtnInside:!0,preloader:!1,midClick:!0,removalDelay:300,mainClass:"my-mfp-zoom-in"}),console.log("Hello World")});
 
 });
