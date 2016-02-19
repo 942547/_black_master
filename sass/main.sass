@@ -325,11 +325,11 @@ div[id^="popup_"]
 		margin-bottom: 5px
 		&:hover, &:focus
 		a
-			border-bottom: solid 2px #fff
+			// border-bottom: solid 2px #444
 			display: block
 			text-decoration: none
 			&:hover, &:focus
-				border-bottom: solid 2px $dc
+				// border-bottom: solid 2px $dc
 				color: inherit
 	.button
 		margin-bottom: 80px
@@ -345,6 +345,50 @@ div[id^="popup_"]
 		left: 0
 		width: 100px
 		z-index: 1
+
+	.check_wrap
+		padding: 10px
+		background: url(/img/28p8cnbig.jpg)
+		width: 280px
+		margin-left: auto
+		margin-right: auto
+		text-shadow: none
+		// box-shadow: 0 0 50px #000
+		+bsh
+		.check
+			padding: 10px
+			border-left: solid 3px $dc
+			border-right: solid 3px $dc
+			border-top: dashed 3px $dc
+			border-bottom: dashed 3px $dc
+			h3
+				position: relative
+				&:after
+					content: ''
+					display: block
+					width: 100%
+					position: absolute
+					bottom: -15px
+					left: 0
+					border-bottom: dashed 3px $dc
+
+			a
+				color: $dc
+			span
+				float: right
+
+	.d_price
+		position: relative
+		font-size: em(20)
+		margin-top: 15px
+		&:after
+			content: ''
+			display: block
+			width: 100%
+			position: absolute
+			top: -5px
+			left: 0
+			border-top: dashed 3px $dc
 
 
 .bg_s_prices
@@ -370,49 +414,6 @@ div[id^="popup_"]
 		background-color: $oc
 		opacity: .7
 		+br10
-.check_wrap
-	padding: 10px
-	background-color: #fff
-	width: 280px
-	margin-left: auto
-	margin-right: auto
-	text-shadow: none
-	// box-shadow: 0 0 50px #000
-	+bsh
-	.check
-		padding: 10px
-		border-left: solid 3px $dc
-		border-right: solid 3px $dc
-		border-top: dashed 3px $dc
-		border-bottom: dashed 3px $dc
-		h3
-			position: relative
-			&:after
-				content: ''
-				display: block
-				width: 100%
-				position: absolute
-				bottom: -15px
-				left: 0
-				border-bottom: dashed 3px $dc
-
-		a
-			color: $dc
-		span
-			float: right
-
-.d_price
-	position: relative
-	font-size: em(20)
-	margin-top: 15px
-	&:after
-		content: ''
-		display: block
-		width: 100%
-		position: absolute
-		top: -5px
-		left: 0
-		border-top: dashed 3px $dc
 
 
 
