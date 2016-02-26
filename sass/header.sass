@@ -93,18 +93,16 @@ a[href^="https://"]:not(.not_out_link)
 // ##############################
 // mobile-menu
 .toggle_mnu
-	// border: 1px solid $dc
-	float: right
-	background-color: rgba(255, 255, 255, .9)
+	+bsh
+	background: url(/img/bg_copper_min.jpg) no-repeat left $copper1
 	border-radius: 2px
 	display: block
 	height: 40px
-	margin-left: 10px
 	padding: 10px 6px 0 6px
-	width: 40px
 	position: fixed
-	top: 20px
-	right: 20px
+	right: 30px
+	top: 30px
+	width: 40px
 	z-index: 10
 	span:after, span:before
 		content: ""
@@ -130,24 +128,28 @@ a[href^="https://"]:not(.not_out_link)
 	&.on span
 		background-color: transparent
 
+.hidden_mnu
+	i.fa, span.bm-Podkova
+		margin-right: 10px
+
 
 
 // ##############################
 // common
 html
-	height: 100%
+	// height: 100%
 body
 	background-color: $dc
 	font-family: "robotoregular", sans-serif
 	font-size: 19px
-	height: 100%
+	// height: 100%
 	line-height: 1.6
 	margin-left: 180px
 	min-width: 320px
 	// overflow-x: hidden
 	position: relative
 .pjax_container
-	height: 100%
+	// height: 100%
 section
 	padding-top: 50px
 	padding-bottom: 80px
@@ -169,7 +171,7 @@ h2
 	font-size: em(55)
 	line-height: em(15)
 h3
-	font-size: em(28)
+	font-size: em(24)
 	line-height: em(15)
 	// font-family: roboto
 a
@@ -184,7 +186,7 @@ p
 	margin-left: auto
 	margin-right: auto
 	max-width: 80%
-	min-width: 300px
+	// min-width: 300px
 .table
 	display: table
 	.tr
@@ -256,8 +258,8 @@ a.btn_li
 .big_first_latter
 	&:first-letter
 		float: left
-		font-size: 70px
-		line-height: 62px
+		font-size: 50px
+		line-height: 42px
 		font-family: "steamy"
 		margin-right: 5px
 
@@ -351,69 +353,13 @@ a.logo
 	font-size: 18px
 
 
-
-// ##############################
-// hidden_mnu
-.hidden_mnu
-	// box-shadow: 0 0 2px #111
-	// font-size: em(20)
-	// padding-bottom: 10px
-	// padding-top: 10px
-	background: $dc
-	border: solid 1px #fff
-	display: none
-	left: 30px
-	position: fixed
-	text-align: center
-	top: 0
-	z-index: 11
-	.mu_container
-		padding: 20px
-	.btn_li
-		margin-bottom: 10px
-
-
-
-// ##############################
-// top_line
-.top_line
-	// background: url(/img/bg-copper_min.jpg) no-repeat center $dc
-	// background-size: cover
-	// border-width: 0 0 15px 0
-	// text-align: center
-	// .mu_container
-	// 	padding: 10px
-	// 	margin: 0
-	// .td
-	// 	height: 56px
-	// a.logo
-	// 	display: inline-block
-	// 	margin: 0
-	// 	img
-	// 		width: 50px
-	// 		height: 50px
-	// 		display: inline-block
-	// .table
-	// 	width: 100%
-	// 	.td + .td
-	// 		padding-left: 10px
-	// .phone
-	// 	font-size: em(18)
-	// 	text-decoration: none
-	// 	&:hover
-	// 		color: inherit
-	// 	i
-	// 		margin-right: 8px
-
-
-
 // ##############################
 // header
 .big-background_wrap
 	background: url(/img/bg-section-copper_min.jpg) no-repeat center $dc
 	background-size: cover
 	border-bottom: solid 2px $dc
-	min-height: 100%
+	min-height: 100vh
 	position: relative
 	&::before
 		border-image: url(/img/border-image-rivets_min.png) 15 round round
@@ -519,6 +465,7 @@ a.logo
 		+br10
 
 .zoom_gallery
+	text-align: center
 	.souvenir_wrap
 		display: inline-block
 		width: 200px

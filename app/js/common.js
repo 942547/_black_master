@@ -15,13 +15,28 @@ $(function() {
 
 	$("img, a").on("dragstart",function(a){a.preventDefault()});
 
+	// mmenu
+	$("#hidden_mnu").mmenu({
+		extensions : [ 'widescreen', 'theme-dark', "effect-menu-slide", "effect-listitems-slide", 'pagedim-black', "pageshadow" ],
+		navbar: {
+			title: "Меню"
+		},
+		"counters": true,
+		"iconPanels": true,
+		"navbars": [
+		{
+			"position": "bottom",
+			"content": [
+			"<a class='fa fa-envelope' href='mailto:info@the-blacksmith.ru'></a>"
+			]
+		}
+		]
+	});
 
-	// YouTube-Video-BG
-	$(document).ready(function(){var a=!1;"none"==$(".player").css("display")&&(a=!0),1==a?$(".big_background").addClass("big-background_default_image"):$(".player").mb_YTPlayer()});
-
-
-	// mobile-menu
-	$(".toggle_mnu").click(function(){return $(this).toggleClass("on"),$(".hidden_mnu").slideToggle(),!1});
+	// toogle-mnu
+	$(".toggle-mnu").click(function() {
+		$(this).addClass("on");
+		});
 
 
 	// Magnific popup zoom dialog
@@ -57,7 +72,14 @@ $(function() {
 				}),
 				// imagefill.js
 				$('.img_souvenirs').imagefill(); 
+				// Yandex.Metrika counter
+				!function(e,t,a){(t[a]=t[a]||[]).push(function(){try{t.yaCounter35150355=new Ya.Metrika({id:35150355,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0,trackHash:!0})}catch(e){}});var c=e.getElementsByTagName("script")[0],n=e.createElement("script"),r=function(){c.parentNode.insertBefore(n,c)};n.type="text/javascript",n.async=!0,n.src="https://mc.yandex.ru/metrika/watch.js","[object Opera]"==t.opera?e.addEventListener("DOMContentLoaded",r,!1):r()}(document,window,"yandex_metrika_callbacks");
+
 				console.log("Good")
 		});
+
+
+	// YouTube-Video-BG
+	$(document).ready(function(){var a=!1;"none"==$(".player").css("display")&&(a=!0),1==a?$(".big_background").addClass("big-background_default_image"):$(".player").mb_YTPlayer()});
 
 });

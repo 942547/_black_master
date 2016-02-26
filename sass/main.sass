@@ -94,6 +94,7 @@ div[id^="popup_"]
 		border-width: 15px
 	.mu_container
 		position: relative
+		text-align: center
 	h2
 		// color: #fff
 		// text-shadow: 0 0 2px $dc
@@ -153,6 +154,15 @@ div[id^="popup_"]
 			border-left: solid 1px $copper1
 			border-right: solid 1px $copper1
 			border-radius: 10px
+			>p
+				font-size: em(14)
+				line-height: em(22)
+
+a.moskva24
+	text-decoration: none
+	text-shadow: 0 0 8px #37301f
+	margin: 20px 0
+	display: inline-block
 
 .bg_s_video
 	+br10
@@ -267,7 +277,7 @@ div[id^="popup_"]
 
 .advantage_wrap
 	max-width: 450px
-	height: 320px
+	height: 250px
 	margin: 20px	auto
 	background: url(/img/bg-youtube_wrap_min.jpg) center $copper1
 	+br10
@@ -285,6 +295,9 @@ div[id^="popup_"]
 		left: 3px
 		border-image: url(/img/border-image-rivets_min.png) 15 round round
 		border-width: 15px
+	>p
+		font-size: em(14)
+		line-height: em(22)
 	> *:not([class*="bg_advantage"])
 		position: relative
 
@@ -347,14 +360,15 @@ div[id^="popup_"]
 		z-index: 1
 
 	.check_wrap
-		padding: 10px
+		+bsh
 		background: url(/img/28p8cnbig.jpg)
-		width: 280px
+		font-size: em(14)
 		margin-left: auto
 		margin-right: auto
+		margin-bottom: 40px
+		max-width: 280px
+		padding: 10px
 		text-shadow: none
-		// box-shadow: 0 0 50px #000
-		+bsh
 		.check
 			padding: 10px
 			border-left: solid 3px $dc
@@ -437,6 +451,7 @@ div[id^="popup_"]
 
 //load libs sass
 @import app/libs/animate/animate.sass
+// @import app/libs/jQuery.mmenu/dist/css/jquery.mmenu.all
 @import app/libs/font-awesome-4.5.0/font-awesome.sass
 @import app/libs/magnific-popup/magnific-popup.sass
 @import app/libs/blackmaster/blackmaster.sass
