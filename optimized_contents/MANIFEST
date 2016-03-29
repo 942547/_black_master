@@ -1,0 +1,15 @@
+This zip file contains optimized resources for http://the-blacksmith.ru/. The optimized resources are listed below in the format of: 
+filename: url
+
+Note: We only include up to 10 MB of optimized contents. If the
+optimized contents of your page are larger than 10 MB, we list them in
+this file too, with 'NOT INCLUDED' to indicate those URLs require
+further optimization.
+
+css/main.min.css: http://the-blacksmith.ru/css/main.min.css?ver=1.0.0
+js/libs.js: http://the-blacksmith.ru/js/libs.js
+js/common.js: http://the-blacksmith.ru/js/common.js
+image/phone-number_min.png: http://the-blacksmith.ru/img/phone-number_min.png
+image/cog_100.png: http://the-blacksmith.ru/img/cog_100.png
+image/vintage-burst_min.jpg: http://the-blacksmith.ru/img/vintage-burst_min.jpg
+image/28p8cnbig.jpg: http://the-blacksmith.ru/img/28p8cnbig.jpg
