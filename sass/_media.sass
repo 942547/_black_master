@@ -18,8 +18,8 @@
 		margin: 0
 	.mnu_left
 		display: none
-	// .mu_container
-	// 	padding-left: 20px
+	.mu_container
+		padding-left: 30px
 
 	.big-background_wrap
 		&::before
@@ -29,13 +29,36 @@
 	.big_background
 		left: 23px
 
-	// .s_video
-	// 	.table
-	// 		.tr
-	// 			.td
-	// 				height: auto
-	// 				.p_wrap
-	// 					margin-top: 20px
+	.s_video
+		&::before
+			left: 3px
+
+	.bg_s_video
+		left: 22px
+
+	.s_advantages
+		&::before
+			left: 3px
+
+	.advantage_wrap
+		height: auto
+
+	.bg_s_advantages
+		left: 22px
+
+	.s_prices
+		&::before
+			left: 3px
+
+	.bg_s_prices
+		left: 22px
+
+	.s_souvenirs
+		&::before
+			left: 3px
+
+	.bg_s_souvenirs
+		left: 22px
 	
 
 
@@ -70,8 +93,8 @@
 	// 	.td
 	// 		height: auto
 
-	// .p_wrap
-	// 	max-width: none
+	.p_wrap
+		max-width: none
 
 	// .s_souvenirs
 	// 	.item
@@ -83,22 +106,122 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-	// .mu_container
-	// 	padding-left: 10px
+	body
+		.mu_container
+			padding: 15px
 
-	// h1
-	// 	font-size: em(34)
+	.header_content
+		margin-left: 10px
+		margin-top: 60px
 
-	// .s_souvenirs
-	// 	.item
-	// 		width: 98%
-	// 		margin: 20px 1%
+	.zoom_gallery
+		.souvenir_wrap
+			width: 190px
+		.img_souvenirs
+			width: 186px
 
+	.p_wrap
+		>p
+			font-size: em(12)
+			line-height: em(18)
 
+	.big-background_wrap
+		background: none
+		border: none
+		&::before
+			border-image: none
+			border-radius: 0
+
+	.big_background
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		border-radius: 0
+		border: none
+
+	.s_video
+		background: none
+		border: none
+		&::before
+			border-image: none
+		.wrap_copper
+			max-width: none
+			width: 100%
+			margin: 0
+
+	.bg_s_video
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		border-radius: 0
+		border: none
+
+	.s_advantages
+		background: none
+		border: none
+		&::before
+			border-image: none
+
+	.advantage_wrap
+		height: auto
+
+	.bg_s_advantages
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		border-radius: 0
+		border: none
+
+	.s_prices
+		background: none
+		border: none
+		&::before
+			border-image: none
+
+	.bg_s_prices
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		border-radius: 0
+		border: none
+		&::before
+			border-radius: 0
+
+	.s_souvenirs
+		background: none
+		border: none
+		border-radius: 0
+		&::before
+			border-image: none
+
+	.bg_s_souvenirs
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		border-radius: 0
+		border: none
+		&::before
+			border-radius: 0
+
+	a.moskva24
+		font-size: em(13)
+	
+	.p_wrap, .wrap_paper
+		>p
+			font-size: em(13)
+			line-height: em(21)
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
+	
+
+
 
 
 /*==========  Mobile First Method  ==========*/
